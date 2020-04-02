@@ -66,7 +66,7 @@ $(function(){
 			
 			$.ajax("/insertEmp", {data:insertData, success: function(data){
 				alert(data);
-				window.location.href = "EmpTest.html";
+				window.location.href = "/admin/EmpTest.html";
 			}})
 		})
 		
@@ -79,7 +79,7 @@ $(function(){
 		var EmpData = $("#insertForm").serialize();
 		$.ajax("/deleteEmp", {data : EmpData, success : function(r) {
 			alert("삭제 성공");
-			window.location.href = "EmpTest.html";
+			window.location.href = "/admin/EmpTest.html";
 			} 
 		});
 	});
@@ -91,16 +91,16 @@ $(function(){
 			$("#btnInsertOk").html("수정");
 	     $.ajax("/updateEmp", {data : EmpData, success : function(r) {
 	    	 alert("수정 성공");
-			window.location.href = "EmpTest.html";
+			window.location.href = "/admin/EmpTest.html";
 	        } 
 	     });
 	});   
 	
 	$("#btnDept").click(function(){
-		window.location.href = "/DeptTest.html"
+		window.location.href = "../all/DeptTest.html"
 	})
 	
-		$.getJSON("listEmp.do",function(data){
+		$.getJSON("/listEmp.do",function(data){
         arr = data;
        // alert(arr);
         $.each(arr, function(idx, e){ 
@@ -140,12 +140,12 @@ $(function(){
 	
 	
 	$("#btnAdmin").click(function(){
-		window.location.href = "index02.html" 
+		window.location.href = "/admin/aopTest.html" 
 		//AOP 로그 리스트 로 추후에 이동시킬예정 
 	})
 	
 	$("#btnHome").click(function(){
-		window.location.href = "EmpTest.html" 
+		window.location.href = "/admin/EmpTest.html" 
 		//AOP 로그 리스트 로 추후에 이동시킬예정 
 	})
 	

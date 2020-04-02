@@ -9,6 +9,7 @@
 	<typeAlias type="com.example.demo.vo.EmpVo" alias="EmpVo"/>
 	<typeAlias type="com.example.demo.vo.AopLogVo" alias="aopLogVo"/>
 	<typeAlias type="com.example.demo.vo.MemberVo" alias="memberVo"/>
+	<typeAlias type="com.example.demo.vo.Member100Vo" alias="member100Vo"/>
 	<typeAlias type="com.example.demo.vo.UrlCntVo" alias="urlcntVo"/>
 </typeAliases>
   <environments default="development">
@@ -27,6 +28,7 @@
     <mapper resource="com/example/demo/db/EmpMapper.xml"/>
     <mapper resource="com/example/demo/db/AopLogMapper.xml"/>
     <mapper resource="com/example/demo/db/MemberMapper.xml"/>
+    <mapper resource="com/example/demo/db/Member100Mapper.xml"/>
     <mapper resource="com/example/demo/db/UrlCntMapper.xml"/>
   </mappers>
 </configuration>
